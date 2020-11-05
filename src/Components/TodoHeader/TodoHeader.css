@@ -1,0 +1,12 @@
+.TodoHeader{
+    width:100%;
+    height:9rem;
+    /* background-color: rgb(143, 153, 153); */
+}
+.TodoHeader__header{
+    font-size: 6rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: rgba(175, 47, 47, 0.15);
+    cursor: pointer;
+
+}

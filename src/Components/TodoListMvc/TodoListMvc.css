@@ -1,0 +1,8 @@
+.TodoListMvc {
+  width: 582px;
+  /* height: 400px; */
+  padding: 16px;
+}
+.TodoListMvc__body {
+  background-color: white;
+}

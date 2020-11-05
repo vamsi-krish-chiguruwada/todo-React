@@ -1,0 +1,35 @@
+/* .TodoFilterButton {
+  padding: 2px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+} */
+/* .TodoFilterButton {
+  padding: 2px 5px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.TodoFilterButton__text {
+  font-size: 12px;
+}
+.TodoFilterButton :hover {
+  border: 1px solid rgb(150, 83, 83);
+} */
+.TodoFilterButton{
+    border: 1px solid transparent;
+    padding: 1px 5px;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+.TodoFilterButton__text{
+    font-size: 12px;
+    color: #777;
+}
+.TodoFilterButton:hover{
+    border: 1px solid #e6e6e6;;
+
+}
+.TodoFilterButton--active{
+  border: 1px solid #757373;;
+
+}
