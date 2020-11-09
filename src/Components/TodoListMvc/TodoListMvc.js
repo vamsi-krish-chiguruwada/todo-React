@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TodoHeader from "../TodoHeader/TodoHeader";
 import TodoSearchArea from "../TodoSearchArea/TodoSearchArea";
 import TodoItem from "../TodoItem/TodoItem";
@@ -7,10 +7,25 @@ import "./TodoListMvc.css";
 
 const TodoListMvc = () => {
   const [todos, setTodos] = useState([]);
+
   const [checkedAll, setCheckedAll] = useState(false);
   const [inputText, setinputText] = useState("");
   const [filter, SetFilter] = useState("All");
   const [warning, setWarning] = useState(false);
+
+  useEffect(() => {
+    let temp = JSON.parse(localStorage.getItem("todolist"));
+    if (temp) {
+      setTodos(temp);
+    } else {
+      setTodos([]);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem("todolist", JSON.stringify(todos));
+  }, [todos]);
+
   const inputChangeHandler = (e) => {
     setinputText(e.target.value);
   };
@@ -86,16 +101,31 @@ const TodoListMvc = () => {
       return temp;
     } else return todos;
   };
+  const handleEditSubmit = (text, editText) => {
+    if (!findindex_list_objs(editText)) {
+      let temp = [...todos];
+      temp[findindex_list_objs(text)].text = editText;
+      setTodos(temp);
+      setinputText("");
+    } else {
+      setWarning(true);
+      setTimeout(() => {
+        setWarning(false);
+      }, 600);
+    }
+  };
 
   return (
     <div className="TodoListMvc">
       <TodoHeader />
       <div className="TodoListMvc__body">
         <TodoSearchArea
+          totalCount={todos.length}
           selectAllTodosHandler={selectAllTodosHandler}
           inputChangeHandler={inputChangeHandler}
           inputText={inputText}
           inputSubmitHandler={inputSubmitHandler}
+          // inputChangeHandler={inputChangeHandler}
         />
         {warning ? <p>Already Exist</p> : null}
         {getTodosByFilter(filter).map((per) => {
@@ -106,6 +136,7 @@ const TodoListMvc = () => {
               removeTodo={removeTodo}
               text={per.text}
               checked={per.checked}
+              handleEditSubmit={handleEditSubmit}
             />
           );
         })}

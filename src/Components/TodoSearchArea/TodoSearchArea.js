@@ -6,7 +6,7 @@ const TodoSearchArea = (props) => {
   return (
     <div className="TodoSearchArea">
       <div onClick={props.selectAllTodosHandler} className="TodoSearchArea__icon">
-        <img  src={Logo} alt = "\/"/>
+        {props.totalCount ? <img src={Logo} alt="\/" /> : null}
       </div>
       <form className="TodoSearchArea__form" onSubmit={props.inputSubmitHandler}>
         <input

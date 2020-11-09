@@ -39,4 +39,10 @@
   color: #777;
 
   /* margin: auto 0px; */
+}@media screen and (max-width:382px){
+  .TodoFilter {
+  flex-direction: column;
+  height: 120px;
+  justify-content: space-evenly;
+  }
 }

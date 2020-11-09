@@ -18,16 +18,16 @@ export default App;
 
 
 import React from "react";
-import './TodoFilterButton.css';
+import './TodoItemIcon.css';
 
-const TodoFilterButton = ()=> {
+const TodoItemIcon = ()=> {
   return (
-    <div className="TodoFilterButton">
+    <div className="TodoItemIcon">
       
     </div>
   );
 }
-export default TodoFilterButton;
+export default TodoItemIcon;
 
 
 \****************************************/

@@ -6,3 +6,34 @@
 .TodoListMvc__body {
   background-color: white;
 }
+
+@media screen and (max-width:582px){
+  .TodoListMvc {
+    width: 480px;
+    /* height: 400px; */
+    /* padding: 16px; */
+  }
+}
+
+@media screen and (max-width:482px){
+  .TodoListMvc {
+    width: 382px;
+    /* height: 400px; */
+    /* padding: 16px; */
+  }
+}
+@media screen and (max-width:382px){
+  .TodoListMvc {
+    width: 282px;
+    /* height: 400px; */
+    /* padding: 16px; */
+  }
+}
+
+@media screen and (max-width:282px){
+  .TodoListMvc {
+    width: 100vw;
+    /* height: 400px; */
+    /* padding: 16px; */
+  }
+}

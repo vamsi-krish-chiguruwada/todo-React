@@ -38,3 +38,21 @@
   font-style: italic; */
 
 }
+@media screen and (max-width:582px){
+ 
+.TodoSearchArea__input {
+  width: auto;
+}
+.TodoSearchArea__form{
+  width: auto;
+}
+}
+@media screen and (max-width:482px){
+  .TodoSearchArea__input {
+    font-size: 1.2rem;
+  }
+}@media screen and (max-width:382px){
+  .TodoSearchArea__input {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,13 @@
+.iconHolder {
+    width: 58px;
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  
+  }
+  .iconHolder img {
+    color: rgba(175, 47, 47, 0.15);
+  
+  }
